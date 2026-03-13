@@ -85,3 +85,7 @@ WHERE stock_level < reorder_point
 GROUP BY category
 ORDER BY items_at_risk DESC;
 ```
+### Result Visualisation
+![Category Risk Result](category_risk_result.png)
+### Result Insight
+The results show which product categories have the greatest concentration of inventory risk. Categories with the highest number of at-risk items may indicate weaknesses in replenishment planning and should be prioritized for closer inventory monitoring.
