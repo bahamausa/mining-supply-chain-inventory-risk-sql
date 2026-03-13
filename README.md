@@ -67,6 +67,6 @@ WHERE stock_level < reorder_point
 ORDER BY shortage_amount DESC;
 ```
 ### Result Visualisation
-![Result](images/shortage_severity_result.png)
+![Shortage Severity Result](shortage_severity_result.png)
 ### Result Insight
 The analysis highlights inventory items with the largest gaps between stock levels and reorder thresholds. These items represent the most urgent replenishment priorities.
