@@ -35,6 +35,17 @@ Explanation
 This analysis identifies inventory items where the current stock level has fallen below the reorder threshold. These items are considered at risk of stockout because the remaining inventory may not be sufficient to sustain operations until new stock arrives.
 
 ## SQL Query
+```sql
+SELECT
+    item_id,
+    category,
+    stock_level,
+    reorder_point
+FROM warehouse_inventory
+WHERE stock_level < reorder_point
+ORDER BY stock_level ASC;
+```
+### Result Visualization
 ![Stockout Risk Result](stockout_risk_result.png)
 ### Result Insight
 The analysis identified **237 inventory items** with stock levels below their reorder threshold. These items represent potential stockout risks and require immediate replenishment planning to avoid supply chain disruptions.
