@@ -7,22 +7,23 @@ This project analyzes inventory risk in a simulated supply chain environment usi
 The goal is to identify potential stockouts, measure inventory shortages, and evaluate supplier lead time risks that may disrupt operations.
 
 ## Tools Used
-
 - SQL
 - PostgreSQL
 - GitHub
+- 
+## Project Structure
+- `sql/` → SQL queries used for the analysis
+- `*.png` → Query result visualizations
+- `README.md` → Project documentation and insights
 
 ## Dataset
-
 Simulated mining supply chain dataset including:
-
 - mine sites
 - inventory levels
 - supplier lead times
 - reorder thresholds
 
 ## Key Analysis
-
 1. Materials at risk of stockout
 2. Supplier lead time impact on inventory
 3. Inventory planning optimization
