@@ -1,5 +1,4 @@
 # Mining Supply Chain Inventory Risk Analysis
-
 This project analyzes inventory risks in mining supply chains using SQL.
 
 ## Project Objective
@@ -10,7 +9,7 @@ The goal is to identify potential stockouts, measure inventory shortages, and ev
 - SQL
 - PostgreSQL
 - GitHub
-- 
+
 ## Project Structure
 - `sql/` → SQL queries used for the analysis
 - `*.png` → Query result visualizations
