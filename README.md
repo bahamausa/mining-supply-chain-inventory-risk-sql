@@ -32,7 +32,7 @@ Simulated mining supply chain dataset including:
 ### Explanation
 This analysis identifies inventory items where the current stock level has fallen below the reorder threshold. These items are considered at risk of stockout because the remaining inventory may not be sufficient to sustain operations until new stock arrives.
 
-## SQL Query
+### SQL Query
 ```sql
 SELECT
     item_id,
@@ -52,7 +52,7 @@ The analysis identified **237 inventory items** with stock levels below their re
 ### Explanation
 This analysis measures the severity of inventory shortages by calculating the difference between the reorder point and the current stock level. The larger the gap between these values, the more critical the shortage becomes.
 
-## SQL Query
+### SQL Query
 ```sql
 SELECT
     item_id,
@@ -73,7 +73,7 @@ The analysis highlights inventory items with the largest gaps between stock leve
 ### Explanation
 This analysis identifies which product categories contain the highest number of inventory items below their reorder point. By grouping at-risk items by category, the query highlights broader patterns in inventory management rather than focusing only on individual items.
 
-## SQL Query
+### SQL Query
 ```sql
 SELECT
     category,
@@ -92,7 +92,7 @@ The results show which product categories have the greatest concentration of inv
 ### Explanation
 This analysis evaluates supply chain risk by comparing the estimated days until inventory stockout with supplier lead times. 
 
-## SQL Query
+### SQL Query
 ```sql
 SELECT
     item_id,
