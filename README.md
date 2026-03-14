@@ -2,11 +2,9 @@
 
 This project analyzes inventory risks in mining supply chains using SQL.
 
-## Objectives
-
-- Identify materials at risk of stockout
-- Analyze supplier lead time impact
-- Evaluate reorder point effectiveness
+## Project Objective
+This project analyzes inventory risk in a simulated supply chain environment using SQL.  
+The goal is to identify potential stockouts, measure inventory shortages, and evaluate supplier lead time risks that may disrupt operations.
 
 ## Tools Used
 
@@ -89,3 +87,28 @@ ORDER BY items_at_risk DESC;
 ![Category Risk Result](category_risk_result.png)
 ### Result Insight
 The results show which product categories have the greatest concentration of inventory risk. Categories with the highest number of at-risk items may indicate weaknesses in replenishment planning and should be prioritized for closer inventory monitoring.
+
+## 4️⃣ Lead Time vs Stockout Risk Analysis
+### Explanation
+This analysis evaluates supply chain risk by comparing the estimated days until inventory stockout with supplier lead times. 
+
+## SQL Query
+```sql
+SELECT
+    item_id,
+    category,
+    stock_level,
+    reorder_point,
+    lead_time_days,
+    daily_demand,
+    ROUND(stock_level / daily_demand, 2) AS days_until_stockout,
+    ROUND(lead_time_days - (stock_level / daily_demand), 2) AS risk_gap
+FROM warehouse_inventory
+WHERE daily_demand > 0
+  AND lead_time_days > stock_level / daily_demand
+ORDER BY risk_gap DESC;
+```
+### Result Visualisation 
+![Leadtime Stockout Risk Result](leadtime_stockout_risk_result.png)
+### Result Insight
+The results highlight products that may run out of stock before new inventory can arrive. These items require urgent replenishment planning, supplier acceleration, or increased safety stock levels to prevent supply chain disruptions.
