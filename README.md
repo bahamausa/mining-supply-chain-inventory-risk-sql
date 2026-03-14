@@ -112,3 +112,11 @@ ORDER BY risk_gap DESC;
 ![Leadtime Stockout Risk Result](leadtime_stockout_risk_result.png)
 ### Result Insight
 The results highlight products that may run out of stock before new inventory can arrive. These items require urgent replenishment planning, supplier acceleration, or increased safety stock levels to prevent supply chain disruptions.
+
+## Skills Demonstrated
+- SQL data analysis using PostgreSQL
+- Inventory risk identification
+- Supply chain lead time analysis
+- Data aggregation and grouping
+- Calculated metrics (stockout risk, shortage severity)
+- Business insight generation from operational data
