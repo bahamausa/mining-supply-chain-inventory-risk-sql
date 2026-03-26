@@ -11,7 +11,6 @@ The goal is to identify potential stockouts, measure inventory shortages, and ev
 - GitHub
 
 ## Project Structure
-- `sql/` → SQL queries used for the analysis
 - `*.png` → Query result visualizations
 - `README.md` → Project documentation and insights
 
