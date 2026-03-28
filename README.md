@@ -161,7 +161,7 @@ I completed a review of inventory risk across the warehouse dataset. The analysi
 
 I recommend prioritizing replenishment for the most critical shortages, reviewing reorder point settings in the most affected categories, and increasing safety stock for items where supplier lead times exceed expected stock coverage.
 
-Please let me know if you would like a category-by-category breakdown or a recommended priority list for replenishment actions.
+Please let me know if you would like a recommended priority list for replenishment actions.
 
 Best regards,  
 [Bahama Usa]
