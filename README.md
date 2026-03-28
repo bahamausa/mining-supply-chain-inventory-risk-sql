@@ -7,6 +7,9 @@ This SQL project analyzes inventory risk in a simulated mining supply chain envi
 - Category-level analysis showed concentrated risk in specific material groups
 - The findings suggest a need for tighter reorder planning, higher safety stock for critical items, and closer monitoring of supplier lead times
 
+### Business Impact
+Without proper intervention, these issues may lead to operational downtime, emergency procurement, and inefficient inventory allocation.
+
 ## Tools Used
 - PostgreSQL
 - GitHub (Project Documentation)
@@ -44,7 +47,7 @@ Then it will stock out in 4 days, but replenishment takes 7 days to arrive. That
 2. Supplier lead time impact on inventory
 3. Inventory planning optimization
 
-## Key Insights
+## Problem Analysis
 ## 1️⃣ Inventory Items at Risk of Stockout
 ### Explanation
 This analysis identifies inventory items where the current stock level has fallen below the reorder threshold. These items are considered at risk of stockout because the remaining inventory may not be sufficient to sustain operations until new stock arrives.
@@ -130,6 +133,24 @@ ORDER BY risk_gap DESC;
 ### Result Insight
 The results highlight products that may run out of stock before new inventory can arrive. These items require urgent replenishment planning, supplier acceleration, or increased safety stock levels to prevent supply chain disruptions.
 
+## Recommendations
+Based on the analysis, the following actions are recommended:
+
+1. **Prioritize urgent replenishment**
+   - Focus first on items with the largest shortage amounts and lowest days until stockout.
+
+2. **Increase safety stock for critical materials**
+   - Items where supplier lead time exceeds expected days until stockout should carry additional buffer stock.
+
+3. **Review reorder point logic**
+   - Reassess reorder thresholds for categories with frequent risk exposure to ensure they reflect actual demand patterns.
+
+4. **Monitor high-risk categories more closely**
+   - Categories with a high concentration of at-risk items may require tighter planning and more frequent review.
+
+5. **Engage suppliers on lead-time performance**
+   - For items with persistent risk gaps, supplier lead times should be reviewed to reduce replenishment delays.
+
 ## Sample Stakeholder Update
 
 **Subject:** Inventory Risk Analysis Summary
@@ -159,21 +180,3 @@ Best regards,
 2. Create the `warehouse_inventory` table
 3. Run the SQL scripts in the `sql/` folder in numerical order
 4. Review the screenshots and findings in the README
-
-## Final Recommendations
-Based on the analysis, the following actions are recommended:
-
-1. **Prioritize urgent replenishment**
-   - Focus first on items with the largest shortage amounts and lowest days until stockout.
-
-2. **Increase safety stock for critical materials**
-   - Items where supplier lead time exceeds expected days until stockout should carry additional buffer stock.
-
-3. **Review reorder point logic**
-   - Reassess reorder thresholds for categories with frequent risk exposure to ensure they reflect actual demand patterns.
-
-4. **Monitor high-risk categories more closely**
-   - Categories with a high concentration of at-risk items may require tighter planning and more frequent review.
-
-5. **Engage suppliers on lead-time performance**
-   - For items with persistent risk gaps, supplier lead times should be reviewed to reduce replenishment delays.
