@@ -15,11 +15,11 @@ This SQL project analyzes inventory risk in a simulated mining supply chain envi
 ## Project Structure
 - `*.png`- Query result visualizations
 - `README.md` - Project documentation and insights
-- `sql/` – SQL queries for each analysis
-01_stockout_risk.sql
-02_shortage_severity.sql
-03_category_risk.sql
-04_leadtime_stockout_risk.sql
+- `SQL` queries for each analysis
+- 01_stockout_risk.sql
+- 02_shortage_severity.sql
+- 03_category_risk.sql
+- 04_leadtime_stockout_risk.sql
 
 ## Dataset Schema
 The project uses a simulated table called `warehouse_inventory`.
